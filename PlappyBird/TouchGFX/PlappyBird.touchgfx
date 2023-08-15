@@ -1,0 +1,232 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img0.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img1.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image3",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img2.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image4",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img3.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image5",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img4.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image6",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img5.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image7",
+            "Width": 240,
+            "Height": 320,
+            "RelativeFilename": "img6.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image8",
+            "X": 300,
+            "Y": 205,
+            "Width": 40,
+            "Height": 280,
+            "RelativeFilename": "statue1.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image9",
+            "X": 300,
+            "Y": -165,
+            "Width": 40,
+            "Height": 280,
+            "RelativeFilename": "statue0.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image10",
+            "X": 90,
+            "Y": 144,
+            "Width": 32,
+            "Height": 32,
+            "RelativeFilename": "bird.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image11",
+            "X": 480,
+            "Y": 254,
+            "Width": 40,
+            "Height": 280,
+            "RelativeFilename": "statue1.png"
+          },
+          {
+            "Type": "Image",
+            "Name": "image12",
+            "X": 480,
+            "Y": -136,
+            "Width": 40,
+            "Height": 280,
+            "RelativeFilename": "statue0.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 86,
+            "Y": 4,
+            "Width": 69,
+            "Height": 31,
+            "TextId": "__SingleUse_ARO3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 252,
+              "Green": 250,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_U3QX",
+              "UseBuffer": true,
+              "BufferSize": 5
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "Width": 240,
+            "Height": 320,
+            "Visible": false,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 240,
+                "Height": 320,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Green": 102,
+                  "Blue": 153
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Green": 51,
+                  "Blue": 102
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "BirdUp",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "BirdUp"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "PlappyBird",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../STM32F429I_DISCO_REV_E01.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
+  },
+  "Version": "4.22.0",
+  "CreatedBy": "4.22.0"
+}
